@@ -1,0 +1,31 @@
+#
+
+#tmp file
+*.swp
+
+#compile object
+*.o
+*.a
+*.so
+
+#ctags and cscope
+
+#idea
+*.class
+/target/*
+.project
+.DS_Store
+/logs/*
+*.log
+.idea/*
+.idea/uiDesigner.xml
+*.iml
+**/.idea/
+/target/
+/java/**/*.iml
+*.tar
+
+/server/server
+/client/client
+/client2/client2
+/consumer/consumer

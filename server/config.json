@@ -1,0 +1,12 @@
+{
+  "TcpPort": 5050,
+  "QuicPort": 5051,
+  "LogPath": "./server.log",
+  "LogLevel": "DEBUG",
+
+  "ReplicaEnable": true,
+
+  "KafkaVersion": "0.10.2.1",
+  "KafkaBrokers": "192.168.40.231:9092",
+  "KafkaDestTopic": "fastDest"
+}

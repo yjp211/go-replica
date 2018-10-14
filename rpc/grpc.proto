@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+
+package rpc;
+
+service RpcGreeter {
+    rpc Ping(Nothing) returns(Nothing){} //心跳
+    rpc Echo(Msg) returns(Msg){} //用于测速
+    rpc Replica(stream RecordWrap) returns(stream Ack){}// 同步
+}
+
+message Msg {
+    string body = 1;
+}
+
+message Nothing {
+}
+
+message Record {
+    uint64 id = 1; //序号
+    string key = 2; //kafka key
+    uint32 partition = 3;
+    string topic = 4;
+    string body = 5;
+}
+
+message RecordWrap {
+    string flag = 1; //标记  方便跟踪
+    uint64 batchId = 2; //序号
+    uint64 processTime = 3; //传输时间戳
+    repeated Record items = 4;
+}
+
+message Ack {
+    uint64 id = 1; //序号
+    uint64 real = 2; //消耗时间
+}

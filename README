@@ -1,0 +1,15 @@
+client读取kafka指定topic通过server网络同步给另一个kafka topic
+
+server端同时支持quic/tcp
+client端通过配置指定使用quic还是tcp
+
+
+编译：
+	make local
+
+server:
+	./server/server -configPath 	./server/config.json
+
+client:
+	./client/client -configPath 	./client/config.json
+

@@ -1,0 +1,20 @@
+{
+  "LogPath": "./client.log",
+  "LogLevel": "DEBUG",
+
+
+  "ReplicaEnable": true,
+  "ReplicaProtocol": "quic",
+  "ReplicaServer": "127.0.0.1:5051",
+  "ReplicaBatchSize": 100,
+  "ReplicaSharding": 2,
+
+  "KafkaVersion": "0.10.2.1",
+  "KafkaZookeepers": "192.168.40.231:2181",
+  "KafkaGroup": "go-replica",
+  "KafkaOffsetInitial": "latest",
+  "KafkaOffsetReset": false,
+  "KafkaTopic": "fast",
+  "KafkaPartitions": 12
+
+}
